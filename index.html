@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium fitness center with expert trainers, state-of-the-art equipment, and personalized nutrition plans. Join today for a healthier tomorrow.">
+    <meta name="keywords" content="gym, fitness, personal training, nutrition, workout, exercise, health">
+    <meta name="author" content="Zie core Fitness">
+    <meta property="og:title" content="Zie core Fitness | Transform Your Body">
+    <meta property="og:description" content="Premium fitness center with expert trainers and top equipment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Ziecorefitness.com">
+    <meta property="og:image" content="https://Ziecorefitness.com/images/hero-banner.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Zie core fitness</title>
+    <style>
+        :root {
+            /* CSS Variables */
+            --primary: #ff5e14;
+            --secondary: #1a1a2e;
+            --accent: #00b4d8;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:var(--font-body) ;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-top: 1rem
+        } 
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 1rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-heading);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color:  #e04b0b;
+            transform: translate(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0f0f1f;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            font-family: var(--font-heading);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .tagline {
+            font-size: 11px;
+            padding: 0;
+            position: relative;
+            left: 52px;
+            margin-top: -08px;
+            letter-spacing: 4px;
+        }
+
+       
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 600;
+            position: relative;
+            
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* hero section  */
+        .hero {
+            color: white;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80') no-repeat center center/cover;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            text-align: center;
+            padding-top: 80px;
+            align-items: center;
+        }
+
+        .hero-content {
+           max-width: 800px;
+           margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+       /* Features */
+       .features {
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+         /* Services */
+         .services {
+            background-color: var(--light);
+         }
+
+         .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+       .testimonial {
+        background-color: var(--light);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        margin: 0 1rem;
+       }
+
+       .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--primary);
+        }
+
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .testimonial-role {
+            color: var(--gray);
+            font-size: 0.9rem;
+             
+        }
+
+        /* Membership plan */
+        .plans {
+            background-color: var(--light);
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .plan-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .plan-card.popular {
+            border: 2px solid var(--primary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .plan-features {
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tabby-note {
+        font-size: 14px;
+        color: green;
+        margin-top: 10px;
+        }
+
+        /* Trainers */
+        .trainers {
+            background-color: white;
+        }
+
+        .trainers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .trainer-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .trainer-img {
+            height: 300px;
+            overflow: hidden;
+           
+        }
+
+        .trainer-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            transform: scale(0.9); 
+             
+        }
+
+        .chat {
+            object-position: top; /* Shows the top (head) of the image */
+            transform: scale(0.9); /* Zooms out slightly to prevent head cut-off */
+        }
+
+
+
+        .trainer-card:hover .trainer-img img {
+            transform: scale(1.1);
+        }
+
+        .trainer-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .trainer-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trainer-specialty {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .trainer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .trainer-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .trainer-social a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        
+
+
+
+
+
+       /* Responsive */
+       @media (max-width: 992px) {
+            .section {
+                padding: 4rem 0;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--secondary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+    
+  
+    </style>
+</head>
+<body>
+    <!-- Header -->
+<header id="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">Zie core <span>Fitness</span>
+             <p class="tagline">UNISEX GYM</p>
+            </a>
+            <ul class="nav-links">
+                <li><a href="Location.html"> Location</a></li>
+                <li><a href="About.html"> About</a></li>
+                <li><a href="service.html"> Services</a></li>
+                <li><a href="Mebership"> Membership</a></li>
+                <li><a href="Blog">Ladies' Hours</a></li>
+                <li><a href="Contact"> Cantact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header> 
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Transform Your Body & Mind</h1>
+            <p>Join our premium fitness center with state-of-the-art equipment, expert trainers, and a supportive community to help you achieve your fitness goals.</p>
+            <div class="hero-btns">
+                <a href="#plans" class="btn btn-primary">Join Now</a>
+                <a href="Location.html" class="btn btn-secondary">Location</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+ <section class="section features" id="features">
+    <div class="container">
+        <h2 class="section-title">Why choose us</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Modern Equipment</h3>
+                <p>Top-of-the-line fitness equipment from leading brands to ensure safe and effective workouts.</p>
+            </div>
+            <div class=" feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-female"></i>
+                </div>
+                <h3>Ladies Hours</h3>
+                <p>Exclusive gym hours for ladies to ensure comfort, privacy, and a supportive workout environment.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>Expert Trainers</h3>
+                <p>Certified professionals with years of experience to guide you through your fitness journey.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Supportive Community</h3>
+                <p>Join a network of like-minded individuals who motivate and inspire each other to succeed.</p>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!--Services  -->
+ <section class="section services" id=" services">
+    <div class="container">
+        <h2 class="section-title"> Our services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Personal Training">
+                </div>
+                <div class="service-content">
+                    <h3>Personal Trainning </h3>
+                    <p>One-on-one sessions with expert trainers tailored to your specific goals and fitness level.</p>
+                     <a href="#" class=" btn btn-secondary">Learn more</a>
+                </div>
+            </div>
+            <div class=" service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1685633224306-2a2b37050713?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gym Equepment">
+                </div>
+                <div class="service-content">
+                    <h3>Access to Equipment</h3>
+                    <p>Enjoy full access to our state-of-the-art equipment for cardiovascular and strength training.</p>
+                    <a href="#" class=" btn btn-secondary">Learn more</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1497888329096-51c27beff665?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nutrition">
+                </div>
+                <div class="service-content">
+                    <h3>Nutrition Plans</h3>
+                    <p>Customized meal plans designed by nutritionists to complement your fitness regimen.</p>
+                    <a href="#" class=" btn btn-secondary">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!-- Testimonials -->
+ <section class="section testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Members Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <div class="testimonial-avatar">
+                    <i class="fas fa-user-circle fa-5x" style="color: #ccc;"></i>
+                </div>
+                <p class="testimonial-text">"Had been to Zie core gym. It has all the equipment you need to build your dream physique. It’s clean and has new machines"</p>
+                <h4 class="testimonial-author">Tawfiq Ahmed</h4>
+                <p class="testimonial-role">Member for 2 month</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-avatar">
+                    <i class="fas fa-user-circle fa-5x" style="color: #ccc;"></i>
+                </div>
+                <p class="testimonial-text">"Great gym and customer service is just as great. Super clean and all the equipment one needs"</p>
+                <h4 class="testimonial-author">Samuel de Langen</h4>
+                <p class="testimonial-role">Member for 1 month </p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-avatar">
+                    <i class="fas fa-user-circle fa-5x" style="color: #ccc;"></i>
+                </div>
+                <p class="testimonial-text">"trainers are very good and friendly atmosphere branded machines newly setup premium gym one of the best gym in ajman"</p>
+                <h4 class="testimonial-author">Ihsan Gg</h4>
+                <p class="testimonial-role">Member for 3 months</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Membership  Plans -->
+ <section class="section plans" id="plans">
+    <div class="container">
+        <h2 class="section-title">Membership Plans</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3 class="plan-name">Basic</h3>
+                <div class="plan-price">209 AED<span>/month</span></div>
+                <ul class="plan-features">
+                    <li>1 Month –<b>209 AED</b></li>
+                    <li>2 Months–<b>359 AED</b></li>
+                    <li>3 Months–<b>459 AED</b></li>
+                    <li>Access to gym & locker</li>
+                    <li>Basic group classes</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Get Started</a>
+                <p class="tabby-note"><b>Tabby available</b></p>
+            </div>
+            <div class="plan-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <h3 class="plan-name">Premium</h3>
+                <div class="plan-price">699 AED<span>6 month</span></div>
+                <ul class="plan-features">
+                    <li>6 Months – <b>699 AED</b></li>
+                    <li>8 Months – <b>799 AED</b></li>
+                    <li>Full access to all equipment</li>
+                    <li>Extended group class access</li>
+                    <li>Locker & Shower facilities</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Get Started</a>
+                <p class="tabby-note"><b>Tabby available</b></p>
+            </div>
+            <div class="plan-card">
+                <h3 class="plan-name">Elite </h3>
+                <div class="plan-price">1099 AED<span>1 Year</span></div>
+                <ul class="plan-features">
+                    <li>12 Months – <b>1099 AED</b></li>
+                    <li>All Premium features</li>
+                    <li>Priority trainer access</li>
+                    <li>Personalized support</li>
+                    <li>Special discounts & perks</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Become Elite</a>
+                <p class="tabby-note"><b>Tabby available</b></p>
+            </div>
+        </div>
+    </div>
+ </section>
+
+<!--Trainers -->
+ <section class="section trainers" id="trainers">
+    <div class="container">
+        <h2 class="section-title">Meet Our Trainers</h2>
+        <div class="trainers-grid">
+            <div class="trainer-card">
+                <div class="trainer-img">
+                    <img src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Alex Morgan">
+                </div>
+                <div class="trainer-content">
+                    <h3>john</h3>
+                    <span class="trainer-specialty">Strength & Conditioning</span>
+                    <p>With 10 years of experience, john specializes in strength training and functional movement patterns.</p>
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trainer-card">
+                <div class="trainer-img">
+                    <img class="chat" src="assets/images/Rania Kareem.png"  alt="Rania Kareem">
+                </div>
+                <div class="trainer-content">
+                    <h3>Rania Kareem</h3>
+                    <span class="trainer-specialty">Yoga & Mobility</span>
+                    <p>Certified yoga instructor with expertise in mobility training and injury prevention.</p>
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+        <h2>Ready to Transform Your Life?</h2>
+        <p>Take the first step towards a healthier, stronger you. Join Zie Core Fitness today and experience the difference with our expert trainers, top-notch facilities, and supportive community.</p>
+        <div class="hero-btns">
+            <a href="#plans" class="btn btn-primary">Join Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Free Trial</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+   <footer id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Zie Core Fitness</h3>
+                <p>Your premier fitness destination offering top-quality training, equipment, and nutrition guidance to help you achieve your health and fitness goals.</p>
+                <div class="social-links">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Membership">Membership</a></li>
+                    <li><a href="ladieshousers">Ladies' Hours</a></li>
+                    <li><a href="contect us.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span> Shop 6, Al Tallah Bldg 8, Muwaihat 1, near Nesto, Al Tallah 2, Ajman, UAE</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+97 1502610078</span>
+                    </li>
+                    <li> 
+                        <i class="fas fa-envelope"></i>
+                        <span>Ziecorefitness@gamil.com </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zie Core Fitness. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+   </footer>
+
+
+ 
+
+  
+
+ 
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Simple testimonial slider
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.style.display = i === index ? 'block' : 'none';
+        });
+    }
+    
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }
+    
+    // Initialize
+    showTestimonial(0);
+    setInterval(nextTestimonial, 5000);
+</script>
+</body>
+</html>
